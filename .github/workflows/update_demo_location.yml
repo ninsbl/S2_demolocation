@@ -38,12 +38,14 @@ jobs:
         run: |
           echo "LD_LIBRARY_PATH=$HOME/install/lib" >> $GITHUB_ENV
       - name: Build
+        working-directory: ./grass
         run: .github/workflows/build_${{ matrix.os }}.sh $HOME/install
 
       - name: Add the bin directory to PATH
         run: |
           echo "$HOME/install/bin" >> $GITHUB_PATH
       - name: Test executing of the grass command
+        working-directory: ./grass
         run: .github/workflows/test_simple.sh
 
       - name: Run tests
