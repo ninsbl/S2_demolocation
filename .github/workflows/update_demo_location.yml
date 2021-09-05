@@ -44,12 +44,9 @@ jobs:
       - name: Add the bin directory to PATH
         run: |
           echo "$HOME/install/bin" >> $GITHUB_PATH
-      - name: Test executing of the grass command
-        working-directory: ./grass
-        run: .github/workflows/test_simple.sh
-
-      - name: Run tests
-        run: .github/workflows/test_thorough.sh
+      - name: Run main workflow
+        working-directory: .
+        run: .github/workflows/run.sh
 
       - name: Make HTML test report available
         if: ${{ always() }}
