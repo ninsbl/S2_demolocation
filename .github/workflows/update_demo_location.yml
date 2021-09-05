@@ -46,7 +46,7 @@ jobs:
           echo "$HOME/install/bin" >> $GITHUB_PATH
       - name: Run main workflow
         working-directory: .
-        run: .github/workflows/run.sh
+        run: bash .github/workflows/run.sh
 
       - name: Make HTML test report available
         if: ${{ always() }}
