@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import grass.script as gscript
+
 gscript.run_command("g.region", res=10, flags="a")
 for instr in ["A", "B"]:
     for proj in ["T31", "T32", "T33", "T34", "T35"]:
