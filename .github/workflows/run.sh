@@ -4,9 +4,9 @@ grass --tmp-location XY --exec python3 get_scenes_list.py
 
 ls scene_lists
 
-git add scene_lists
-git commit -m "update" scene_lists/*
-git push origin main
+#git add scene_lists
+#git commit -m "update" scene_lists/*
+#git push origin main
 
 #grass ./epsg_25832/NBS --exec python3 build_strds.py
 #cd S2_demolocation
