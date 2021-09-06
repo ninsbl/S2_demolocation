@@ -16,7 +16,7 @@ for instr in ["A", "B"]:
             print(f"{proj}")
             scenes = gscript.read_command("m.crawl.thredds", 
                                           input=f"https://nbstds.met.no/thredds/catalog/NBS/S2{instr}/{year}/catalog.html",
-                                          output=directory.joinpaths(f"S2{instr}_{year}_{proj}.txt"),
+                                          output=directory.joinpath(f"S2{instr}_{year}_{proj}.txt"),
                                           filter=f".*{proj}.*DTERRENG.*",
                                           nprocs=10)
 
