@@ -1,4 +1,4 @@
-name: T31
+name: T33
 # Build and run tests on Ubuntu
 
 on:
@@ -54,7 +54,7 @@ jobs:
       - name: Init workflow
         working-directory: .
         run: bash .github/workflows/init.sh
-      - name: Run main workflow A
+      - name: Run main workflow
         working-directory: .
         run: bash .github/workflows/run.sh
       - name: Update resources

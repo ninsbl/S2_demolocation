@@ -1,4 +1,4 @@
-name: T31
+name: T35
 # Build and run tests on Ubuntu
 
 on:
@@ -20,6 +20,7 @@ jobs:
       S2_NSTRUMENT: A
       S2_PROJ: T35
       S2_YEAR: 2021
+      ZENODO_TOKEN: ${{secrets.ZENODO_TOKEN}}
 
     steps:
       - uses: actions/checkout@v2
@@ -54,7 +55,7 @@ jobs:
       - name: Init workflow
         working-directory: .
         run: bash .github/workflows/init.sh
-      - name: Run main workflow A
+      - name: Run main workflow
         working-directory: .
         run: bash .github/workflows/run.sh
       - name: Update resources
