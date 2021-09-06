@@ -14,7 +14,9 @@ for instr in ["A", "B"]:
         print(f"{year}")
         for proj in ["T31", "T32", "T33", "T34", "T35"]:
             print(f"{proj}")
-            scenes = gscript.read_command("m.crawl.thredds", url=f"https://nbstds.met.no/thredds/catalog/NBS/S2{instr}/{year}/catalog.html", filter=f".*{proj}.*DTERRENG.*", nprocs=10)
-            with open(directory.joinpaths(f"S2{instr}_{year}_{proj}.txt"), "w") as scene_list:
-                scene_list.write(scenes)
+            scenes = gscript.read_command("m.crawl.thredds", 
+                                          input=f"https://nbstds.met.no/thredds/catalog/NBS/S2{instr}/{year}/catalog.html",
+                                          output=directory.joinpaths(f"S2{instr}_{year}_{proj}.txt"),
+                                          filter=f".*{proj}.*DTERRENG.*",
+                                          nprocs=10)
 
