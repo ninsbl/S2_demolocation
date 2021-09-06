@@ -15,10 +15,13 @@ year = os.environ["S2_YEAR"]
 
 print(f"Sentinel-2{instr}")
 print(f"{proj}")
-print(f"{year}")
-scenes = gscript.read_command("m.crawl.thredds", 
+
+# DTERRENG data starts 2017
+for year in [2017, 2018, 2019, 2020, 2021]:
+    print(f"{year}")
+    scenes = gscript.read_command("m.crawl.thredds", 
                               input=f"https://nbstds.met.no/thredds/catalog/NBS/S2{instr}/{year}/catalog.html",
                               output=directory.joinpath(f"S2{instr}_{year}_{proj}.txt"),
                               filter=f".*{proj}.*DTERRENG.*",
-                              nprocs=100)
+                              nprocs=200)
 
