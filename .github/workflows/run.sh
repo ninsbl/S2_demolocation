@@ -20,7 +20,7 @@ git add scene_lists
 git commit -m "update" scene_lists/*
 git push origin main
 
-grass ./S2_demolocation/epsg_25832/NBS --exec python3 build_strds.py
+grass ./epsg_25832/NBS --exec python3 build_strds.py
 cd S2_demolocation
 tar czf ../S2_demolocation.tar.gz epsg_25832
 cd ..
