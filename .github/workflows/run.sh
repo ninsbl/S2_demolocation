@@ -14,8 +14,14 @@ grass --tmp-location XY --exec python3 setup_grass.py
 
 grass --tmp-location XY --exec python3 get_scenes_list.py
 
-ls
+ls scene_lists
 
-grass ./epsg_25832/NBS --exec python3 build_strds.py
-tar czf S2_demolocation.tar.gz epsg_25832
+git add scene_lists
+git commit -m "update" scene_lists/*
+git push origin main
+
+grass ./S2_demolocation/epsg_25832/NBS --exec python3 build_strds.py
+cd S2_demolocation
+tar czf ../S2_demolocation.tar.gz epsg_25832
+cd ..
 zenodo_upload/zenodo_upload.sh 5458665 S2_demolocation.tar.gz
