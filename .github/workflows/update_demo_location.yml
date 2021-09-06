@@ -22,7 +22,7 @@ jobs:
       - name: Get dependencies
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y wget git gawk findutils
+          sudo apt-get install -y wget git gawk findutils python3-gdal
           git clone https://github.com/jhpoelen/zenodo-upload.git
           git clone https://github.com/osgeo/grass.git
           cd grass
@@ -40,14 +40,15 @@ jobs:
       - name: Build
         working-directory: ./grass
         run: .github/workflows/build_${{ matrix.os }}.sh $HOME/install
-
       - name: Add the bin directory to PATH
         run: |
           echo "$HOME/install/bin" >> $GITHUB_PATH
+      - name: Add Python libs
+        working-directory: ./grass
+        run: sudo python3 -m pip install cf-units
       - name: Run main workflow
         working-directory: .
         run: bash .github/workflows/run.sh
-
       - name: Make HTML test report available
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
