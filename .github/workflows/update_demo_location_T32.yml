@@ -16,6 +16,11 @@ jobs:
           - ubuntu-20.04
       fail-fast: false
 
+    env:
+      S2_NSTRUMENT: A
+      S2_PROJ: T32
+      S2_YEAR: 2021
+
     steps:
       - uses: actions/checkout@v2
 
@@ -51,14 +56,7 @@ jobs:
         run: bash .github/workflows/init.sh
       - name: Run main workflow A
         working-directory: .
-        run: echo "S2_NSTRUMENT=A" >> $GITHUB_ENV
-             echo "S2_PROJ=T32" >> $GITHUB_ENV
-             echo "S2_YEAR=2021" >> $GITHUB_ENV
-             bash .github/workflows/run.sh
-      - name: Run main workflow B
-        working-directory: .
-        run: echo "S2_NSTRUMENT=B" >> $GITHUB_ENV
-             bash .github/workflows/run.sh
+        run: bash .github/workflows/run.sh
       - name: Make HTML test report available
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
