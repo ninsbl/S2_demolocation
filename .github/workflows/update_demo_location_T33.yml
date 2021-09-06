@@ -57,10 +57,10 @@ jobs:
       - name: Run main workflow A
         working-directory: .
         run: bash .github/workflows/run.sh
-      - name: Make HTML test report available
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v2
+      - name: Update resources
+        uses: test-room-7/action-update-file@v1
         with:
-          name: testreport-${{ matrix.os }}
-          path: testreport
-          retention-days: 3
+            file-path: scene_lists/*
+            commit-msg: Update resources
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+ 
