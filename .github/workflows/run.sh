@@ -1,6 +1,6 @@
 #!/bin/bash
 
-grass --tmp-location XY --exec python3 get_scenes_list.py
+grass --tmp-location XY --exec python3 get_scenes_list.py &> ./scene_lists/S2${S2_INSTRUMENT}_${S2_PROJ}.log
 
 ls scene_lists
 
