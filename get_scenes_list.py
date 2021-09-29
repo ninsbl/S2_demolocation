@@ -15,20 +15,20 @@ proj = os.environ["S2_PROJ"]
 
 print(f"{proj}")
 print(f"{instr}")
+print(f"{year}")
 
 # DTERRENG data starts 2017
-for year in [2017, 2018, 2019, 2020, 2021]:
-    print(f"{year}")
+year = 2017 # for year in [2017, 2018, 2019, 2020, 2021]:
     #scenes = gscript.read_command("m.crawl.thredds", 
     #                          input=f"https://nbstds.met.no/thredds/catalog/NBS/S2A/{year}/catalog.html",
     #                          output=directory.joinpath(f"S2A_{year}_{proj}.txt"),
     #                          filter=f".*{proj}.*DTERRENG.*",
     #                          nprocs=100,
     #                          overwrite=True)
-    scenes = gscript.read_command("m.crawl.thredds", 
+scenes = gscript.read_command("m.crawl.thredds", 
                               input=f"https://nbstds.met.no/thredds/catalog/NBS/S2B/{year}/catalog.html",
-                              output=directory.joinpath(f"S2B_{year}_{proj}.txt"),
+                              output=directory.joinpath(f"S2{instr}_{year}_{proj}.txt"),
                               filter=f".*{proj}.*DTERRENG.*",
-                              nprocs=150,
+                              nprocs=30,
                               overwrite=True)
 
