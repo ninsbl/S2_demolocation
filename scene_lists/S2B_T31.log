@@ -1,0 +1,20 @@
+Starting GRASS GIS...
+Creating new GRASS GIS location <tmploc>...
+Cleaning up temporary files...
+Executing <python3 get_scenes_list.py> ...
+WARNING: No datasets returned from server
+         <https://nbstds.met.no/thredds/catalog/NBS/S2B/2017/catalog.html>
+         with the given input.
+         Please check provided options.
+WARNING: No datasets returned from server
+         <https://nbstds.met.no/thredds/catalog/NBS/S2B/2017/catalog.html>
+         with the given input.
+         Please check provided options.
+T31
+A
+2017
+T31
+B
+2017
+Execution of <python3 get_scenes_list.py> finished.
+Cleaning up temporary files...
