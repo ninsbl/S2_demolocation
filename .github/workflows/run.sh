@@ -8,6 +8,8 @@
 #git commit -m "update" scene_lists/*
 #git push origin main
 
+dos2unix bandref.txt
+
 grass epsg_25833/NBS_DTERRENG --exec python3 build_strds.py
 
 #cd S2_demolocation
