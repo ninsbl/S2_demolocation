@@ -25,7 +25,7 @@ jobs:
       - name: Get dependencies
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y wget git gawk findutils python3-gdal libnetcdf
+          sudo apt-get install -y wget git gawk findutils python3-gdal libnetcdf-dev
           git clone https://github.com/jhpoelen/zenodo-upload.git
           git clone https://github.com/osgeo/grass.git
           cd grass
