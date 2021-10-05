@@ -8,7 +8,7 @@
 #git commit -m "update" scene_lists/*
 #git push origin main
 
-grass ./epsg_25833/NBS_DTERRENG --exec python3 build_strds.py
+grass epsg_25833/NBS_DTERRENG --exec python3 build_strds.py
 
 #cd S2_demolocation
 #tar czf ../S2_demolocation.tar.gz epsg_25832
