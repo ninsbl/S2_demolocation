@@ -66,6 +66,6 @@ jobs:
       - name: Update location  from workflow
         uses: test-room-7/action-update-file@v1
         with:
-            file-path: epsg*
+            file-path: epsg_25833/*
             commit-msg: Update location  from workflow
             github-token: ${{ secrets.GITHUB_TOKEN }}
