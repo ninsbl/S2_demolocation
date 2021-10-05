@@ -23,6 +23,7 @@ for instr in ["A", "B"]:
 
                 #filter, write to tmp file, use tmpfile as input
                 scenes = infile.read_text().split("\n")
+                print(scenes)
                 rel_scenes = [scene for scene in scenes if f"_{proj}" in scene]
                 if rel_scenes:
                     tmp_file.write_text("\n".join(rel_scenes))
@@ -33,7 +34,8 @@ for instr in ["A", "B"]:
                                         bandref="bandref.txt",
                                         flags="la{}".format("o" if proj == "T33" else ""),
                                         nodata="-1,65535",
-                                        nprocs=20)
+                                        nprocs=20,
+                                        verbose=True)
                 else:
                     print("No DTERRENG scenes in {}".format(str(infile)))
 
