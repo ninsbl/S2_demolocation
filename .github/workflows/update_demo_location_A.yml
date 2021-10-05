@@ -1,4 +1,4 @@
-name: S2A_all_years
+name: S2_netCDF_from_NBS
 # Build and run tests on Ubuntu
 
 on:
@@ -17,7 +17,6 @@ jobs:
       fail-fast: false
 
     env:
-      S2_INSTRUMENT: A
       ZENODO_TOKEN: ${{secrets.ZENODO_TOKEN}}
 
     steps:
@@ -58,9 +57,15 @@ jobs:
       - name: Run main workflow
         working-directory: .
         run: bash .github/workflows/run.sh
-      - name: Update resources
+        #      - name: Update scene_lists from workflow
+        #        uses: test-room-7/action-update-file@v1
+        #        with:
+        #            file-path: scene_lists/*
+        #            commit-msg: Update resources
+        #            github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update location  from workflow
         uses: test-room-7/action-update-file@v1
         with:
-            file-path: scene_lists/*
-            commit-msg: Update resources
+            file-path: epsg_25833/NBS_DTERRENG/*
+            commit-msg: Update location  from workflow
             github-token: ${{ secrets.GITHUB_TOKEN }}
