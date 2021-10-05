@@ -14,11 +14,11 @@ tmp_file = Path("./tmp.txt")
 for instr in ["A", "B"]:
     for year in [2017]:
         for proj in ["T31", "T32", "T33", "T34", "T35"]:
-            for month in ["1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]:
+            for month in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]:
                 print(f"S2{instr} {year} {month:02}")
                 infile = directory.joinpath(f"S2{instr}_{year}_{month:02}.txt")
                 if not infile.exists():
-                    print(f"{infile} not found")
+                    print("{} not found".format(str(infile)))
                     continue
 
                 #filter, write to tmp file, use tmpfile as input
@@ -34,4 +34,6 @@ for instr in ["A", "B"]:
                                         flags="la{}".format("o" if proj == "T33" else ""),
                                         nodata="-1,65535",
                                         nprocs=20)
+                else:
+                    print("No DTERRENG scenes in {}".format(str(infile)))
 
