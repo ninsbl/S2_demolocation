@@ -12,7 +12,7 @@ tmp_file = Path("./tmp.txt")
 
 # Set region
 for instr in ["A", "B"]:
-    for year in [2017]:
+    for year in [2018]:
         for proj in ["T31", "T32", "T33", "T34", "T35"]:
             for month in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]:
                 print(f"S2{instr} {year} {month:02}")
