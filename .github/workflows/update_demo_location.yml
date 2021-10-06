@@ -24,6 +24,7 @@ jobs:
 
       - name: Get dependencies
         run: |
+          sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
           sudo apt-get update -y
           sudo apt-get install -y wget git gawk findutils python3-gdal libnetcdf-dev netcdf-bin libnetcdf15
           git clone https://github.com/jhpoelen/zenodo-upload.git
