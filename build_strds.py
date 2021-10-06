@@ -34,7 +34,7 @@ for instr in ["A", "B"]:
                                         bandref="bandref.txt",
                                         flags="la{}".format("o" if proj == "T33" else ""),
                                         nodata="-1,65535",
-                                        nprocs=20,
+                                        nprocs=4,
                                         verbose=True)
                 else:
                     print("No DTERRENG scenes in {}".format(str(infile)))
