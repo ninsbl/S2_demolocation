@@ -21,7 +21,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+        with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Get dependencies
         run: |
           sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
@@ -65,8 +66,9 @@ jobs:
         #            commit-msg: Update resources
         #            github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Update location  from workflow
-        uses: test-room-7/action-update-file@v1
-        with:
-            file-path: epsg_25833/*
-            commit-msg: Update location  from workflow
-            github-token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name 'ninsbl'
+          git config --global user.email 'stefan.blumentrath@gmx.de'
+          git add epsg_25833/*
+          git commit -am "Update location from workflow"
+          git push
