@@ -36,7 +36,7 @@ for proj in ["T31", "T32", "T33", "T34", "T35"]:
                             bandref="bandref.txt",
                             flags="la{}".format("o" if proj == "T33" else ""),
                             nodata="-1,65535",
-                            nprocs=20,
+                            nprocs=4,
                             verbose=True)
     else:
         print("No DTERRENG scenes with projection {} in {}".format(proj, str(infile)))
