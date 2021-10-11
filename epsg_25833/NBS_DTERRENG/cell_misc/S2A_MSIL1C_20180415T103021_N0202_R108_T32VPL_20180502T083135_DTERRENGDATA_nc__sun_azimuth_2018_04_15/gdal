@@ -1,0 +1,4 @@
+file: /home/runner/work/S2_demolocation/S2_demolocation/epsg_25833/NBS_DTERRENG/gdal/netcdf_S2A_MSIL1C_20180415T103021_N0202_R108_T32VPL_20180502T083135_DTERRENGDATA_nc_sun_azimuth.vrt
+band: 1
+null: -1
+type: 6
