@@ -11,7 +11,12 @@ directory = Path("./scene_lists")
 
 tmp_file = Path("./tmp.txt")
 
-infile = directory.glob("*.txt")[0]
+infile = set(list(directory.glob("*.txt")))
+if not infile:
+    sys.exit("No scene list found")
+
+infile = infile[0]
+
 print(infile)
 
 # Set region
