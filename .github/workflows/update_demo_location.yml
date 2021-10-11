@@ -69,6 +69,6 @@ jobs:
         run: |
           git config --global user.name ninsbl
           git config --global user.email stefan.blumentrath@gmx.de
-          git add epsg_25833/*
+          git add epsg_25833/NBS_DTERRENG/*
           git commit -am "Update location from workflow"
           git push
