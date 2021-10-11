@@ -11,7 +11,7 @@ directory = Path("./scene_lists")
 
 tmp_file = Path("./tmp.txt")
 
-infile = set(list(directory.glob("*.txt")))
+infile = sorted(list(directory.glob("*.txt")))
 if not infile:
     sys.exit("No scene list found")
 
@@ -22,10 +22,6 @@ print(infile)
 # Set region
 for proj in ["T31", "T32", "T33", "T34", "T35"]:
     print(infile, proj)
-
-    if not infile.exists():
-        print("{} not found".format(str(infile)))
-        continue
 
     #filter, write to tmp file, use tmpfile as input
     scenes = infile.read_text().split("\n")
@@ -44,6 +40,8 @@ for proj in ["T31", "T32", "T33", "T34", "T35"]:
                             verbose=True)
     else:
         print("No DTERRENG scenes with projection {} in {}".format(proj, str(infile)))
+
+print("Done processing {}".format(infile))
 
 # move fully processed file with scenes
 subprocess.run(["git", "mv", str(infile), str(directory.joinpath("processed", infile.name))])
