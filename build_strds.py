@@ -46,7 +46,7 @@ if scenes:
                                         bandref="bandref.txt",
                                         flags="la{}".format("o" if proj == "T33" else ""),
                                         nodata="-1,65535",
-                                        nprocs=20,
+                                        nprocs=4,
                                         verbose=True)
             else:
                 gscript.message("No DTERRENG scenes with projection {} over Norway in {}".format(proj, str(infile)))
