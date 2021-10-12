@@ -28,25 +28,30 @@ gscript.message("processing {}".format(infile))
 #filter, write to tmp file, use tmpfile as input
 scenes = infile.read_text().split("\n")
 if scenes:
-    # Filter scenes over Norway
-    rel_scenes = [scene for scene in scenes if re.match(re_str, scene)]
-    if rel_scenes:
-        # Use only latest file for each scene
-        scene_ids = set([re.findall(".*?_T....._", scene)[0].rstrip("_") for scene in rel_scenes])
-        rel_scenes = [sorted([scene for scene in rel_scenes if scene_id in scene], reverse=True)[0] for scene_id in scene_ids]
+    for proj in ["T31", "T32", "T33", "T34", "T35"]:
+        rel_scenes = [scene for scene in scenes if f"_{proj}" in scene]
         if rel_scenes:
-            tmp_file.write_text("\n".join(rel_scenes))
-            # Import relevant scenes
-            gscript.run_command("t.rast.import.netcdf",
-                                input=tmp_file,
-                                output="Sentinel_2_DTERRENG",
-                                bandref="bandref.txt",
-                                flags="la{}".format("o" if proj == "T33" else ""),
-                                nodata="-1,65535",
-                                nprocs=20,
-                                verbose=True)
-    else:
-        gscript.message("No DTERRENG scenes with projection {} over Norway in {}".format(proj, str(infile)))
+            # Filter scenes over Norway
+            rel_scenes = [scene for scene in rel_scenes if re.match(re_str, scene)]
+            if rel_scenes:
+                # Use only latest file for each scene
+                scene_ids = set([re.findall(".*?_T....._", scene)[0].rstrip("_") for scene in rel_scenes])
+                rel_scenes = [sorted([scene for scene in rel_scenes if scene_id in scene], reverse=True)[0] for scene_id in scene_ids]
+                if rel_scenes:
+                    tmp_file.write_text("\n".join(rel_scenes))
+                    # Import relevant scenes
+                    gscript.run_command("t.rast.import.netcdf",
+                                        input=tmp_file,
+                                        output="Sentinel_2_DTERRENG",
+                                        bandref="bandref.txt",
+                                        flags="la{}".format("o" if proj == "T33" else ""),
+                                        nodata="-1,65535",
+                                        nprocs=20,
+                                        verbose=True)
+            else:
+                gscript.message("No DTERRENG scenes with projection {} over Norway in {}".format(proj, str(infile)))
+        else:
+            gscript.message("No DTERRENG scenes with projection {} in {}".format(proj, str(infile)))
 else:
     gscript.message("No DTERRENG scenes in {}".format(str(infile)))
 
