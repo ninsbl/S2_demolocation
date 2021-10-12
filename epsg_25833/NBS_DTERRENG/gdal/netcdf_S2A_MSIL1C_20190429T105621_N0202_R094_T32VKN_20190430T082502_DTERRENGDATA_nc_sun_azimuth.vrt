@@ -1,0 +1,123 @@
+<VRTDataset rasterXSize="11940" rasterYSize="11940" subClass="VRTWarpedDataset">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["ETRS89 / UTM zone 33N",GEOGCS["ETRS89",DATUM["European_Terrestrial_Reference_System_1989",SPHEROID["GRS 1980",6378137,298.257222101],AUTHORITY["EPSG","6258"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4258"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",15],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","25833"]]</SRS>
+  <GeoTransform> -1.3036908971430222e+05,  1.0032500962429515e+01,  0.0000000000000000e+00,  6.8424641681215428e+06,  0.0000000000000000e+00, -1.0032500962429515e+01</GeoTransform>
+  <Metadata>
+    <MDI key="NC_GLOBAL#CLOUD_COVERAGE_ASSESSMENT">0.29</MDI>
+    <MDI key="NC_GLOBAL#Conventions">CF-1.6</MDI>
+    <MDI key="NC_GLOBAL#DATATAKE_1_DATATAKE_SENSING_START">2019-04-29T10:56:21.024Z</MDI>
+    <MDI key="NC_GLOBAL#DATATAKE_1_DATATAKE_TYPE">INS-NOBS</MDI>
+    <MDI key="NC_GLOBAL#DATATAKE_1_ID">GS2A_20190429T105621_020111_N02.07</MDI>
+    <MDI key="NC_GLOBAL#DATATAKE_1_SENSING_ORBIT_DIRECTION">DESCENDING</MDI>
+    <MDI key="NC_GLOBAL#DATATAKE_1_SPACECRAFT_NAME">Sentinel-2A</MDI>
+    <MDI key="NC_GLOBAL#DEGRADED_ANC_DATA_PERCENTAGE">0.0</MDI>
+    <MDI key="NC_GLOBAL#DEGRADED_MSI_DATA_PERCENTAGE">0</MDI>
+    <MDI key="NC_GLOBAL#file_creation_date">2019-04-30T16:17:21Z</MDI>
+    <MDI key="NC_GLOBAL#FOOTPRINT">POLYGON((3.578036 60.238232, 5.556228 60.304387, 5.448849 61.287997, 3.409606 61.219140, 3.578036 60.238232))</MDI>
+    <MDI key="NC_GLOBAL#GENERATION_TIME">2019-04-29T16:30:30.000941Z</MDI>
+    <MDI key="NC_GLOBAL#history">2019-04-30T16:17:21Z. Converted from SAFE to NetCDF by NBS team.</MDI>
+    <MDI key="NC_GLOBAL#institution">Norwegian Meteorological Institute</MDI>
+    <MDI key="NC_GLOBAL#keywords">[Earth Science, Atmosphere, Atmospheric radiation, Reflectance]</MDI>
+    <MDI key="NC_GLOBAL#keywords_vocabulary">GCMD Science Keywords</MDI>
+    <MDI key="NC_GLOBAL#netcdf4_version_id">4.4.0</MDI>
+    <MDI key="NC_GLOBAL#PREVIEW_GEO_INFO">Not applicable</MDI>
+    <MDI key="NC_GLOBAL#PREVIEW_IMAGE_URL">Not applicable</MDI>
+    <MDI key="NC_GLOBAL#PROCESSING_BASELINE">02.02</MDI>
+    <MDI key="NC_GLOBAL#PROCESSING_LEVEL">Level-1C</MDI>
+    <MDI key="NC_GLOBAL#PRODUCT_START_TIME">2019-04-29T11:02:29.765434Z</MDI>
+    <MDI key="NC_GLOBAL#PRODUCT_STOP_TIME">2019-04-29T11:05:55.857892Z</MDI>
+    <MDI key="NC_GLOBAL#PRODUCT_TYPE">S2MSI1C</MDI>
+    <MDI key="NC_GLOBAL#QUANTIFICATION_VALUE">10000</MDI>
+    <MDI key="NC_GLOBAL#REFLECTANCE_CONVERSION_U">0.9881056184493099</MDI>
+    <MDI key="NC_GLOBAL#relativeOrbitNumber">94</MDI>
+    <MDI key="NC_GLOBAL#source">surface observation</MDI>
+    <MDI key="NC_GLOBAL#SPECIAL_VALUE_NODATA">0</MDI>
+    <MDI key="NC_GLOBAL#SPECIAL_VALUE_SATURATED">65535</MDI>
+    <MDI key="NC_GLOBAL#summary">Sentinel-2 Multi-Spectral Instrument Level-1C product.</MDI>
+    <MDI key="NC_GLOBAL#title">Sentinel-2 L1C data</MDI>
+    <MDI key="NETCDF_DIM_EXTRA">{time}</MDI>
+    <MDI key="NETCDF_DIM_time_DEF">{1,4}</MDI>
+    <MDI key="NETCDF_DIM_time_VALUES">1209380549</MDI>
+    <MDI key="sun_azimuth#comment">1 to 1 with original 22x22 resolution</MDI>
+    <MDI key="sun_azimuth#coordinates">lat lon</MDI>
+    <MDI key="sun_azimuth#grid_mapping">UTM_projection</MDI>
+    <MDI key="sun_azimuth#long_name">Solar azimuth angle</MDI>
+    <MDI key="sun_azimuth#units">degree</MDI>
+    <MDI key="sun_azimuth#_FillValue">9.96921e+36</MDI>
+    <MDI key="time#calendar">gregorian</MDI>
+    <MDI key="time#long_name">reference time of satellite image</MDI>
+    <MDI key="time#units">seconds since 1981-01-01 00:00:00</MDI>
+    <MDI key="UTM_projection#epsg_code">32632</MDI>
+    <MDI key="UTM_projection#false_easting">500000</MDI>
+    <MDI key="UTM_projection#false_northing">0</MDI>
+    <MDI key="UTM_projection#grid_mapping_name">transverse_mercator</MDI>
+    <MDI key="UTM_projection#latitude_of_projection_origin">0</MDI>
+    <MDI key="UTM_projection#longitude_of_central_meridian">9</MDI>
+    <MDI key="UTM_projection#proj4_string">+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs </MDI>
+    <MDI key="UTM_projection#scale_factor_at_central_meridian">0.9996</MDI>
+    <MDI key="UTM_projection#semi_major_axis">6378137</MDI>
+    <MDI key="UTM_projection#semi_minor_axis">6356752.314245179</MDI>
+    <MDI key="x#standard_name">projection_x_coordinate</MDI>
+    <MDI key="x#units">m</MDI>
+    <MDI key="y#standard_name">projection_y_coordinate</MDI>
+    <MDI key="y#units">m</MDI>
+  </Metadata>
+  <VRTRasterBand dataType="Float32" band="1" blockXSize="512" subClass="VRTWarpedRasterBand">
+    <Metadata>
+      <MDI key="comment">1 to 1 with original 22x22 resolution</MDI>
+      <MDI key="coordinates">lat lon</MDI>
+      <MDI key="grid_mapping">UTM_projection</MDI>
+      <MDI key="long_name">Solar azimuth angle</MDI>
+      <MDI key="NETCDF_DIM_time">1209380549</MDI>
+      <MDI key="NETCDF_VARNAME">sun_azimuth</MDI>
+      <MDI key="STATISTICS_MAXIMUM">169.40299987793</MDI>
+      <MDI key="STATISTICS_MEAN">168.1079188608</MDI>
+      <MDI key="STATISTICS_MINIMUM">166.82502746582</MDI>
+      <MDI key="STATISTICS_STDDEV">0.77213582214929</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">84.57</MDI>
+      <MDI key="units">degree</MDI>
+      <MDI key="_FillValue">9.96921e+36</MDI>
+    </Metadata>
+    <NoDataValue>-1</NoDataValue>
+    <UnitType>degree</UnitType>
+  </VRTRasterBand>
+  <BlockXSize>512</BlockXSize>
+  <BlockYSize>128</BlockYSize>
+  <GDALWarpOptions>
+    <WarpMemoryLimit>6.71089e+07</WarpMemoryLimit>
+    <ResampleAlg>NearestNeighbour</ResampleAlg>
+    <WorkingDataType>Float32</WorkingDataType>
+    <Option name="INIT_DEST">NO_DATA</Option>
+    <Option name="ERROR_OUT_IF_EMPTY_SOURCE_WINDOW">FALSE</Option>
+    <SourceDataset relativeToVRT="0">NETCDF:"/vsicurl/https://nbstds.met.no/thredds/fileServer/NBS/S2A/2019/04/29/S2A_MSIL1C_20190429T105621_N0202_R094_T32VKN_20190430T082502_DTERRENGDATA.nc":sun_azimuth</SourceDataset>
+    <Transformer>
+      <ApproxTransformer>
+        <MaxError>0.125</MaxError>
+        <BaseTransformer>
+          <GenImgProjTransformer>
+            <SrcGeoTransform>199975,10,0,6800045,0,-10</SrcGeoTransform>
+            <SrcInvGeoTransform>-19997.5,0.100000000000000006,0,680004.5,0,-0.100000000000000006</SrcInvGeoTransform>
+            <DstGeoTransform>-130369.089714302216,10.0325009624295145,0,6842464.16812154278,0,-10.0325009624295145</DstGeoTransform>
+            <DstInvGeoTransform>12994.6750269467666,0.0996760432662680412,0,682029.754469571635,0,-0.0996760432662680412</DstInvGeoTransform>
+            <ReprojectTransformer>
+              <ReprojectionTransformer>
+                <SourceSRS>PROJCS["unnamed",GEOGCS["unknown",DATUM["unnamed",SPHEROID["Spheroid",6378137,298.257223562997]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",9],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]</SourceSRS>
+                <TargetSRS>PROJCS["ETRS89 / UTM zone 33N",GEOGCS["ETRS89",DATUM["European_Terrestrial_Reference_System_1989",SPHEROID["GRS 1980",6378137,298.257222101],AUTHORITY["EPSG","6258"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4258"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",15],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","25833"]]</TargetSRS>
+                <Options>
+                  <Option key="AREA_OF_INTEREST">3.409505170225857,60.23791579572485,5.556893238271754,61.28805873536522</Option>
+                </Options>
+              </ReprojectionTransformer>
+            </ReprojectTransformer>
+          </GenImgProjTransformer>
+        </BaseTransformer>
+      </ApproxTransformer>
+    </Transformer>
+    <BandList>
+      <BandMapping src="1" dst="1">
+        <SrcNoDataReal>-1</SrcNoDataReal>
+        <SrcNoDataImag>0</SrcNoDataImag>
+        <DstNoDataReal>-1</DstNoDataReal>
+        <DstNoDataImag>0</DstNoDataImag>
+      </BandMapping>
+    </BandList>
+  </GDALWarpOptions>
+</VRTDataset>

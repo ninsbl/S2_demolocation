@@ -1,0 +1,4 @@
+file: /home/runner/work/S2_demolocation/S2_demolocation/epsg_25833/NBS_DTERRENG/gdal/netcdf_S2A_MSIL1C_20190422T110621_N0202_R137_T33WXT_20190423T042909_DTERRENGDATA_nc_MSK_DETFOO_B02.vrt
+band: 1
+null: -1
+type: 1

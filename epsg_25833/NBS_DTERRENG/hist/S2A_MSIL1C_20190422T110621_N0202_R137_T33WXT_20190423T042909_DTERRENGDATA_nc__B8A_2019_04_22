@@ -1,0 +1,14 @@
+Tue Oct 12 17:16:49 2021
+S2A_MSIL1C_20190422T110621_N0202_R137_T33WXT_20190423T042909_DTERRENGDATA_nc__B8A_2019_04_22
+NBS_DTERRENG
+runner
+GDAL-link
+surface observation
+Norwegian Meteorological Institute
+Sentinel-2 Multi-Spectral Instrument Level-1C product.
+r.external --quiet -o -m input="/home/runner/work/S2_demolocation/S2\
+_demolocation/epsg_25833/NBS_DTERRENG/gdal/netcdf_S2A_MSIL1C_2019042\
+2T110621_N0202_R137_T33WXT_20190423T042909_DTERRENGDATA_nc_B8A.vrt" \
+output="S2A_MSIL1C_20190422T110621_N0202_R137_T33WXT_20190423T042909\
+_DTERRENGDATA_nc__B8A_2019_04_22" band=1
+2019-04-23T14:29:10Z. Converted from SAFE to NetCDF by NBS team.
