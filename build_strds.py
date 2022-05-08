@@ -18,7 +18,13 @@ infile = sorted(list(directory.glob("*.txt")))
 if not infile:
     sys.exit("No scene list found")
 
-infile = infile[0]
+with open(tmp_file, "w") as scenes:
+    for scene_file in infile:
+        content = scene_file.read_text()
+        scenes.write(content)
+        scenes.write("\n")
+
+infile = tmp_file
 
 print(infile)
 # Regular expression for tiles over Norway
@@ -44,7 +50,7 @@ if scenes:
                     gscript.run_command("t.rast.import.netcdf",
                                         input=tmp_file,
                                         output="Sentinel_2_DTERRENG",
-                                        bandref="bandref.txt",
+                                        semantic_label="bandref.txt",
                                         flags="la{}".format("o" if proj == "T33" else ""),
                                         nodata="-1,65535",
                                         nprocs=40,
